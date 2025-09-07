@@ -1,0 +1,64 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px var(--dark-green);
+}
+
+form {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+form h1 {
+  text-align: center;
+  margin: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20px;
+  gap: 10px;
+}
+
+.wrapper input {
+  padding: 5px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+form button {
+  padding: 5px 20px;
+  font-family: 'Poltab SemiBold';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--foreground);
+  background-color: var(--dark-green);
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: var(--mint-green);
+}
+
+p > span {
+  color: #fff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p > span:hover {
+  color: var(--mint-green);
+}
