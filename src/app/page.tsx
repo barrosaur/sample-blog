@@ -1,9 +1,18 @@
-import React from "react";
-// import Login from '@/components/Login'
+'use client';
+import React, { useState } from "react";
+import Login from '@/components/Login'
 import Signup from '@/components/Signup'
 
 export default function Home() {
+  const [switchComp, setSwitchComp] = useState(false);
+
   return (
-    <Signup/>
+    <>
+      {switchComp ? (
+        <Signup onSwitchComponent={() => setSwitchComp(!switchComp)}/>
+      ):(
+        <Login onSwitchComp={() => setSwitchComp(!switchComp)}/>
+      )}
+    </>
   );
 }

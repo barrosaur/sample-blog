@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import '@/styles/Forms.css'
 
-const Login = () => {
+interface LoginProps {
+  onSwitchComp: () => void;
+}
+
+const Login = ({ onSwitchComp } : LoginProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -35,7 +39,7 @@ const Login = () => {
         </div>
       </form>
 
-      <p>Don't have an account? <span>Sign up here</span></p>
+      <p>Don't have an account? <span onClick={onSwitchComp}>Sign up here</span></p>
     </div>
   );
 }

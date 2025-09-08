@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import '@/styles/Forms.css'
 import Image from "next/image";
 
-const Signup = () => {
+interface SignupProps {
+  onSwitchComponent: () => void;
+}
+
+const Signup = ({ onSwitchComponent } : SignupProps) => {
   const imgSize = 30;
 
   const [name, setName] = useState('');
@@ -83,7 +87,7 @@ const Signup = () => {
         </div>
       </form>
 
-      <p>Already have an account? <span>Login here</span></p>
+      <p>Already have an account? <span onClick={onSwitchComponent}>Login here</span></p>
     </div>
   );
 }
