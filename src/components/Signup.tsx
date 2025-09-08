@@ -14,7 +14,6 @@ const Signup = () => {
 
   const showPassword = (e) => {
     e.preventDefault();
-
     setSeePass((prev) => !prev);
   }
   
