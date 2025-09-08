@@ -62,3 +62,23 @@ p > span {
 p > span:hover {
   color: var(--mint-green);
 }
+
+.pw-see {
+  display: flex;
+}
+
+.show-pass-btn {
+  flex-shrink: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.show-pass-btn:hover {
+  background-color: var(--light-mint); 
+  border: none;
+  outline: none;
+}
+
+.pw-see input {
+  flex: 1;
+}

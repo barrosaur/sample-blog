@@ -4,10 +4,19 @@ import '@/styles/Forms.css'
 import Image from "next/image";
 
 const Signup = () => {
+  const imgSize = 30;
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPass, setConfirmPass] = useState('');
+  const [seePass, setSeePass] = useState(false);
+
+  const showPassword = (e) => {
+    e.preventDefault();
+
+    setSeePass((prev) => !prev);
+  }
   
   return (
     <div className="form-wrapper">
@@ -40,18 +49,26 @@ const Signup = () => {
           <label htmlFor="">Enter password</label>
           <div className="pw-see">
             <input 
-              type="password"
+              type={seePass ? "text" : "password"}
               value={password}
               onChange={e => setPassword(e.target.value)}
               required
             />
+            <button type="button" className="show-pass-btn" onClick={showPassword}>
+              <Image
+                src={seePass ? "/eye-open.svg": "/eye-closed.svg"}
+                height={imgSize}
+                width={imgSize}
+                alt={seePass ? "Show Password" : "Hide Password"}
+              />
+            </button>
           </div>
         </div>
 
         <div className="wrapper">
           <label htmlFor="">Confirm password</label>
           <input 
-            type="password"
+            type={seePass ? "text" : "password"}
             value={confirmPass}
             onChange={e => setConfirmPass(e.target.value)}
             required 
