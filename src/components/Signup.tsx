@@ -74,6 +74,10 @@ const Signup = () => {
           />
         </div>
 
+        {password != confirmPass && (
+          <p className="warning">Passwords do not match.</p>
+        )}
+
         <div className="btn-container">
           <button type="submit">Submit</button>
         </div>

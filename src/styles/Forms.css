@@ -82,3 +82,8 @@ p > span:hover {
 .pw-see input {
   flex: 1;
 }
+
+.warning {
+  color: red;
+  text-align: center;
+}
