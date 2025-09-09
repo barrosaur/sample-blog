@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
 @font-face {
   font-family: 'Poltab SemiBold';
   src: url('/fonts/poltab/Poltab-SemiBold.ttf');
@@ -8,6 +12,7 @@
   --dark-blue: #092635;
   --dark-green: #1B4242;
   --mint-green: #5C8374;
+  --mint-hover: #638f7f;
   --light-mint: #9EC8B9;
   --foreground: #ececec;
 }
